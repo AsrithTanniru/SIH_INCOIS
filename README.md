@@ -1,4 +1,4 @@
-#ShoreAlert App
+ShoreAlert App
 
 This is powered by React Native..
 
