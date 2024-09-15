@@ -15,7 +15,7 @@ function Header({onNotificationPress }) {
             </View>
             <TextInput
                 style={styles.searchInput}
-                placeholder="Search..."
+                placeholder="Search.."
                 placeholderTextColor="#ccc"
             />
             <TouchableOpacity style={styles.iconContainer} onPress={()=>navigation.navigate('AlertScreen')}>
