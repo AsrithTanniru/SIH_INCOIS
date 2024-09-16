@@ -32,16 +32,27 @@ export default function ProfileScreen() {
 
     return (
         <View style={styles.container}>
+            <View style={styles.header}>
+                <Text style={styles.headerTitle}>Shore Alert</Text>
+                <Ionicons name="notifications-outline" size={30} color="#ffffff" style={styles.locicon} />
+            </View>
             <View style={styles.card}>
                 <Image
                     source={require('../assets/user.png')}
                     style={styles.img}
                 /> 
                 <Text style={styles.name}>Asrith</Text>
-                <Text style={styles.mail}>8923472022</Text>
+                <Text style={styles.mail}>7095989705</Text>
+                <Text style={styles.mail}>Guntur</Text>
                 <Text style={styles.mail}>Andhra Pradesh</Text>
             </View>
             <View>
+                <TouchableOpacity style={styles.item} onPress={() => ('')}>
+                    <Ionicons name="stats-chart" size={22} color="15719f" style={styles.icon} />
+                    {/* <Icon name="notifications-outline" size={22} color="#15719f" style={styles.icon} /> */}
+                    <Text style={styles.itemtext}>Insights</Text>
+                    <Icon name="chevron-right" style={styles.right} size={22} color="#15719f"/>
+                </TouchableOpacity>
                 <TouchableOpacity style={styles.item} onPress={() => ('')}>
                     <Ionicons name="notifications" size={22} color="15719f" style={styles.icon} />
                     {/* <Icon name="notifications-outline" size={22} color="#15719f" style={styles.icon} /> */}
@@ -71,6 +82,28 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         flex: 1,
         justifyContent: 'flex-start',
+    },
+    header: {
+        width: '100%',
+        flexDirection:'row',
+        backgroundColor: '#15719f',
+        padding: 15,
+        marginTop:-60,
+        alignItems: 'center',
+        borderBottomWidth: 1,
+        borderBottomColor: '#ddd',
+    },
+    headerTitle: {
+        fontFamily: 'Poppins_600SemiBold',
+        fontSize: 25,
+        marginLeft:40,
+        color: '#fff',
+        alignItems:'center',
+        paddingTop:7,
+    },
+    locicon:{
+        marginLeft:140,
+        alignItems:'center',
     },
     card: {
         backgroundColor: '#FFFFFF',

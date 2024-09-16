@@ -1,24 +1,20 @@
 import React from 'react';
 import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
 import { Ionicons } from '@expo/vector-icons'; 
-import { useFonts, Poppins_400Regular, Poppins_500Medium } from '@expo-google-fonts/poppins';
 import { useNavigation } from '@react-navigation/native';
-import Alertscreen from './Alerts';
+import Homescreen from './Home';
 
-function Header({onNotificationPress }) {
-    const navigation=useNavigation();
-    
+function Header({ currentLocation }) {
+    const navigation = useNavigation();
+
     return (
         <View style={styles.headerContainer}>
-            <View style={styles.searchContainer} >
-            <Ionicons name="location-outline" size={24} color="#ffffff" style={styles.locicon}/>
+            <View style={styles.searchContainer}>
+                <Ionicons name="location-outline" size={24} color="#ffffff" style={styles.locicon}/>
+                <Text style={styles.locationText}>{currentLocation}</Text>
             </View>
-            <TextInput
-                style={styles.searchInput}
-                placeholder="Search.."
-                placeholderTextColor="#ccc"
-            />
-            <TouchableOpacity style={styles.iconContainer} onPress={()=>navigation.navigate('AlertScreen')}>
+            
+            <TouchableOpacity style={styles.iconContainer} onPress={() => navigation.navigate('AlertScreen')}>
                 <Ionicons name="notifications-outline" size={24} color="#fff" />
             </TouchableOpacity>
         </View>
@@ -30,28 +26,47 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         backgroundColor: '#15719f',
-        marginTop:20,
-        height: 150,
-        marginBottom:-30,
-        marginTop:20,
-        paddingHorizontal: 10,
-        borderBottomWidth: 1,
-        borderRadius:20,
+        marginTop:40,
+        padding: 10,
+        justifyContent: 'space-between',
+        width:300,
+        width: '100%', // Change width to 100%
+        height: 70,
+        margin:40,
+        // paddingHorizontal: 20, // Adjust padding for better spacing
+        // paddingVertical: 10,
+        // position: 'absolute', // Optional: Makes the header fixed at the top
+        // top: 0, // Ensure it is at the top
+        left: -40,
+        // right:-30, 
+        borderRadius:10,
+    },
+    searchContainer: {
+        flexDirection: 'row',
+        alignItems: 'center',
+    },
+    locationText: {
+        fontSize: 18,
+        color: '#fff',
+        fontFamily: 'Poppins_400Regular',
+        marginLeft: 1,
+        marginTop:4,
     },
     searchInput: {
-        flex: 1,
-        fontFamily:'Poppins_500Medium',
-        backgroundColor: '#fff',
-        height: 50,
-        borderRadius: 10,
+        height: 40,
+        borderColor: '#ddd',
+        borderWidth: 1,
+        borderRadius: 20,
         paddingHorizontal: 10,
         marginHorizontal: 10,
-        paddingHorizontal: 30,
-        color: '#333',
-        alignItems:'center',
+        flex: 1,
+        backgroundColor: '#fff',
     },
     iconContainer: {
         padding: 10,
+    },
+    locicon: {
+        marginRight: 5,
     },
 });
 
