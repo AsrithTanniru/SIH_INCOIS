@@ -36,20 +36,12 @@ Follow these steps to get the app running locally on your device:
 
    ```bash
    git clone https://github.com/AsrithTanniru/SIH_INCOIS.git
-
-
-
+2.Install Dependencies
+   Use npx to install all necessary packages:
    
-Install Dependencies
-
-Use npx to install all necessary packages:
-                 
     npx install
-
-
-*Run the App in Development Mode*
-  
-Start the development server using Expo:
+3.Run the App in Development Mode*
+  Start the development server using Expo:
    
     npx expo start
    
