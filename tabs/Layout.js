@@ -8,7 +8,7 @@ import ProfileScreen from './ProfileTab.js';
 import { useFonts, Poppins_400Regular, Poppins_500Medium } from '@expo-google-fonts/poppins';
 import { Ionicons } from '@expo/vector-icons';
 import * as SplashScreen from 'expo-splash-screen';
-import beachesData from './data/data.json'; // Adjust the path as needed
+import beachesData from './data/data.json';
 
 SplashScreen.preventAutoHideAsync();
 
