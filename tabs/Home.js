@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, TouchableOpacity, Alert } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import Entypo from '@expo/vector-icons/Entypo';
 import * as Location from 'expo-location';
-import beachesData from './data/data.json'; // Adjust the path as needed
+import beachesData from './data/data.json';
 import { useNavigation } from '@react-navigation/native';
 import Header from './Header';
 // import * as Notifications from 'expo-notifications';
@@ -84,7 +84,7 @@ export default function Homescreen() {
     ];
     
 
-    // Function to request location permissions and fetch location
+  //location requesting
     const requestLocationPermission = async () => {
         try {
             let { status } = await Location.requestForegroundPermissionsAsync();
